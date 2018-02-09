@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F3E8B55D-84CB-481D-A478-9A4678957DCC}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AOEOQuestParser</RootNamespace>
+    <AssemblyName>AOEOQuestParser</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Libraries\database\Database.cs" />
+    <Compile Include="Libraries\database\models\Advisor.cs" />
+    <Compile Include="Libraries\database\models\Advisors.cs" />
+    <Compile Include="Libraries\database\models\advisor\Techs.cs" />
+    <Compile Include="Libraries\database\models\base\Base.cs" />
+    <Compile Include="Libraries\database\models\Blueprint.cs" />
+    <Compile Include="Libraries\database\models\Blueprints.cs" />
+    <Compile Include="Libraries\database\models\blueprint\Cost.cs" />
+    <Compile Include="Libraries\database\models\Civilization.cs" />
+    <Compile Include="Libraries\database\models\Civilizations.cs" />
+    <Compile Include="Libraries\database\models\civilization\Agetech.cs" />
+    <Compile Include="Libraries\database\models\civilization\Allowedcharactertypes.cs" />
+    <Compile Include="Libraries\database\models\civilization\Charactertype .cs" />
+    <Compile Include="Libraries\database\models\civilization\Civcardinfo.cs" />
+    <Compile Include="Libraries\database\models\civilization\Equipmentdialogtextures.cs" />
+    <Compile Include="Libraries\database\models\civilization\Greeting.cs" />
+    <Compile Include="Libraries\database\models\civilization\Homecityloadscreens.cs" />
+    <Compile Include="Libraries\database\models\civilization\Ignorecommandbutton.cs" />
+    <Compile Include="Libraries\database\models\civilization\Matchmakingtextures.cs" />
+    <Compile Include="Libraries\database\models\civilization\Scenariobaseunits.cs" />
+    <Compile Include="Libraries\database\models\civilization\Startingcities.cs" />
+    <Compile Include="Libraries\database\models\civilization\Startingcity.cs" />
+    <Compile Include="Libraries\database\models\civilization\Startingresources.cs" />
+    <Compile Include="Libraries\database\models\civilization\Ui.cs" />
+    <Compile Include="Libraries\database\models\civilization\Unitregen.cs" />
+    <Compile Include="Libraries\database\models\civilization\Wall.cs" />
+    <Compile Include="Libraries\database\models\civilization\Welcomedialogs.cs" />
+    <Compile Include="Libraries\database\models\Consumable.cs" />
+    <Compile Include="Libraries\database\models\Consumables.cs" />
+    <Compile Include="Libraries\database\models\Craftschool.cs" />
+    <Compile Include="Libraries\database\models\Craftschools.cs" />
+    <Compile Include="Libraries\database\models\craftschool\Allowedcapitals.cs" />
+    <Compile Include="Libraries\database\models\craftschool\Gear.cs" />
+    <Compile Include="Libraries\database\models\craftschool\Gearicons.cs" />
+    <Compile Include="Libraries\database\models\craftschool\Items.cs" />
+    <Compile Include="Libraries\database\models\Design.cs" />
+    <Compile Include="Libraries\database\models\Designs.cs" />
+    <Compile Include="Libraries\database\models\design\Input.cs" />
+    <Compile Include="Libraries\database\models\design\Output.cs" />
+    <Compile Include="Libraries\database\models\design\OutputConsumable.cs" />
+    <Compile Include="Libraries\database\models\Equipment.cs" />
+    <Compile Include="Libraries\database\models\Equipments.cs" />
+    <Compile Include="Libraries\database\models\equipment\Rank.cs" />
+    <Compile Include="Libraries\database\models\equipment\Ranks.cs" />
+    <Compile Include="Libraries\database\models\generic\Advisor.cs" />
+    <Compile Include="Libraries\database\models\generic\Blueprint.cs" />
+    <Compile Include="Libraries\database\models\generic\Capitalresource.cs" />
+    <Compile Include="Libraries\database\models\generic\Design.cs" />
+    <Compile Include="Libraries\database\models\generic\Gamecurrency.cs" />
+    <Compile Include="Libraries\database\models\generic\LootRoll.cs" />
+    <Compile Include="Libraries\database\models\generic\Material.cs" />
+    <Compile Include="Libraries\database\models\generic\Quest.cs" />
+    <Compile Include="Libraries\database\models\generic\Sellcostoverride.cs" />
+    <Compile Include="Libraries\database\models\generic\Trait.cs" />
+    <Compile Include="Libraries\database\models\LootRoll.cs" />
+    <Compile Include="Libraries\database\models\LootRolls.cs" />
+    <Compile Include="Libraries\database\models\Material.cs" />
+    <Compile Include="Libraries\database\models\Materials.cs" />
+    <Compile Include="Libraries\database\models\Quest.cs" />
+    <Compile Include="Libraries\database\models\Questgiver.cs" />
+    <Compile Include="Libraries\database\models\Questgivers.cs" />
+    <Compile Include="Libraries\database\models\questgiver\Despawntrigger.cs" />
+    <Compile Include="Libraries\database\models\questgiver\Location.cs" />
+    <Compile Include="Libraries\database\models\questgiver\Nearbuilding.cs" />
+    <Compile Include="Libraries\database\models\questgiver\Onquest.cs" />
+    <Compile Include="Libraries\database\models\questgiver\Onunitcount.cs" />
+    <Compile Include="Libraries\database\models\questgiver\Override.cs" />
+    <Compile Include="Libraries\database\models\questgiver\Overrides.cs" />
+    <Compile Include="Libraries\database\models\questgiver\Spawntrigger.cs" />
+    <Compile Include="Libraries\database\models\Questinstance.cs" />
+    <Compile Include="Libraries\database\models\Questinstances.cs" />
+    <Compile Include="Libraries\database\models\questinstance\Objective.cs" />
+    <Compile Include="Libraries\database\models\Quests.cs" />
+    <Compile Include="Libraries\database\models\QuestTimer.cs" />
+    <Compile Include="Libraries\database\models\questtimer\Event.cs" />
+    <Compile Include="Libraries\database\models\questtimer\Events.cs" />
+    <Compile Include="Libraries\database\models\quest\Diplomacysettings.cs" />
+    <Compile Include="Libraries\database\models\quest\Objectives.cs" />
+    <Compile Include="Libraries\database\models\quest\ObjectivesSecondary.cs" />
+    <Compile Include="Libraries\database\models\quest\objectives\AndObjective.cs" />
+    <Compile Include="Libraries\database\models\quest\objectives\Criteria.cs" />
+    <Compile Include="Libraries\database\models\quest\objectives\criteriatypes\Buildunit.cs" />
+    <Compile Include="Libraries\database\models\quest\objectives\criteriatypes\Collectmaterial.cs" />
+    <Compile Include="Libraries\database\models\quest\objectives\criteriatypes\Collectresource.cs" />
+    <Compile Include="Libraries\database\models\quest\objectives\criteriatypes\Completegame.cs" />
+    <Compile Include="Libraries\database\models\quest\objectives\criteriatypes\Convertunit.cs" />
+    <Compile Include="Libraries\database\models\quest\objectives\criteriatypes\Counter.cs" />
+    <Compile Include="Libraries\database\models\quest\objectives\criteriatypes\Dummy.cs" />
+    <Compile Include="Libraries\database\models\quest\objectives\criteriatypes\Kill.cs" />
+    <Compile Include="Libraries\database\models\quest\objectives\criteriatypes\Ownsequipment.cs" />
+    <Compile Include="Libraries\database\models\quest\objectives\criteriatypes\Ownsunit.cs" />
+    <Compile Include="Libraries\database\models\quest\objectives\criteriatypes\Population.cs" />
+    <Compile Include="Libraries\database\models\quest\objectives\criteriatypes\Protectunit.cs" />
+    <Compile Include="Libraries\database\models\quest\objectives\criteriatypes\Queststatus.cs" />
+    <Compile Include="Libraries\database\models\quest\objectives\criteriatypes\Reduceunitsto.cs" />
+    <Compile Include="Libraries\database\models\quest\objectives\criteriatypes\Repairunit.cs" />
+    <Compile Include="Libraries\database\models\quest\objectives\criteriatypes\Techstatus.cs" />
+    <Compile Include="Libraries\database\models\quest\objectives\criteriatypes\Timer.cs" />
+    <Compile Include="Libraries\database\models\quest\objectives\criteriatypes\Tribute.cs" />
+    <Compile Include="Libraries\database\models\quest\objectives\criteriatypes\Unitdiscovered.cs" />
+    <Compile Include="Libraries\database\models\quest\objectives\criteriatypes\Unitinarea.cs" />
+    <Compile Include="Libraries\database\models\quest\objectives\criteriatypes\Unitnearunit.cs" />
+    <Compile Include="Libraries\database\models\quest\objectives\criteriatypes\Wingame.cs" />
+    <Compile Include="Libraries\database\models\quest\objectives\OrObjective.cs" />
+    <Compile Include="Libraries\database\models\quest\objectives\Values.cs" />
+    <Compile Include="Libraries\database\models\quest\Onaccept.cs" />
+    <Compile Include="Libraries\database\models\quest\onaccept\Blueprint.cs" />
+    <Compile Include="Libraries\database\models\quest\onaccept\Enableprotip.cs" />
+    <Compile Include="Libraries\database\models\quest\onaccept\Protip.cs" />
+    <Compile Include="Libraries\database\models\quest\onaccept\Questgiver.cs" />
+    <Compile Include="Libraries\database\models\quest\onaccept\Unlockequipment.cs" />
+    <Compile Include="Libraries\database\models\quest\onaccept\UnlockRegion.cs" />
+    <Compile Include="Libraries\database\models\quest\Playersettings.cs" />
+    <Compile Include="Libraries\database\models\quest\playersettings\Aiflagvariables.cs" />
+    <Compile Include="Libraries\database\models\quest\playersettings\Aislidervariables.cs" />
+    <Compile Include="Libraries\database\models\quest\playersettings\Aivariable.cs" />
+    <Compile Include="Libraries\database\models\quest\Prereqs.cs" />
+    <Compile Include="Libraries\database\models\quest\prereqs\AndPrereq.cs" />
+    <Compile Include="Libraries\database\models\quest\prereqs\Civilization.cs" />
+    <Compile Include="Libraries\database\models\quest\prereqs\Level.cs" />
+    <Compile Include="Libraries\database\models\quest\prereqs\OrPrereq.cs" />
+    <Compile Include="Libraries\database\models\quest\prereqs\Questcomplete.cs" />
+    <Compile Include="Libraries\database\models\quest\prereqs\Queststatus.cs" />
+    <Compile Include="Libraries\database\models\quest\prereqs\Values.cs" />
+    <Compile Include="Libraries\database\models\quest\Questgivers.cs" />
+    <Compile Include="Libraries\database\models\quest\Questreturners.cs" />
+    <Compile Include="Libraries\database\models\quest\Randommap.cs" />
+    <Compile Include="Libraries\database\models\quest\randommap\Mapvariable.cs" />
+    <Compile Include="Libraries\database\models\quest\randommap\Mapvariables.cs" />
+    <Compile Include="Libraries\database\models\quest\randommap\Nuggetoverride.cs" />
+    <Compile Include="Libraries\database\models\quest\randommap\Nuggetoverrides.cs" />
+    <Compile Include="Libraries\database\models\quest\Rewards.cs" />
+    <Compile Include="Libraries\database\models\quest\RewardsSecondary.cs" />
+    <Compile Include="Libraries\database\models\quest\rewards\Advisor.cs" />
+    <Compile Include="Libraries\database\models\quest\rewards\Alliancepoints.cs" />
+    <Compile Include="Libraries\database\models\quest\rewards\Blueprint.cs" />
+    <Compile Include="Libraries\database\models\quest\rewards\Capitalresource.cs" />
+    <Compile Include="Libraries\database\models\quest\rewards\Capitaltech.cs" />
+    <Compile Include="Libraries\database\models\quest\rewards\Consumable.cs" />
+    <Compile Include="Libraries\database\models\quest\rewards\Consumematerial.cs" />
+    <Compile Include="Libraries\database\models\quest\rewards\Enableprotip.cs" />
+    <Compile Include="Libraries\database\models\quest\rewards\Gamecurrency.cs" />
+    <Compile Include="Libraries\database\models\quest\rewards\Lockregion.cs" />
+    <Compile Include="Libraries\database\models\quest\rewards\Loottable.cs" />
+    <Compile Include="Libraries\database\models\quest\rewards\Mailreward.cs" />
+    <Compile Include="Libraries\database\models\quest\rewards\Material.cs" />
+    <Compile Include="Libraries\database\models\quest\rewards\Or.cs" />
+    <Compile Include="Libraries\database\models\quest\rewards\Protip.cs" />
+    <Compile Include="Libraries\database\models\quest\rewards\QuestGiver.cs" />
+    <Compile Include="Libraries\database\models\quest\rewards\Trait.cs" />
+    <Compile Include="Libraries\database\models\quest\rewards\Unlockregion.cs" />
+    <Compile Include="Libraries\database\models\quest\rewards\Xp.cs" />
+    <Compile Include="Libraries\database\models\quest\Targets.cs" />
+    <Compile Include="Libraries\database\models\quest\targets\Grouping.cs" />
+    <Compile Include="Libraries\database\models\quest\targets\Overrides.cs" />
+    <Compile Include="Libraries\database\models\quest\targets\Protounit.cs" />
+    <Compile Include="Libraries\database\models\quest\Timereffects.cs" />
+    <Compile Include="Libraries\database\models\quest\timereffects\Spawnunit.cs" />
+    <Compile Include="Libraries\database\models\Trait.cs" />
+    <Compile Include="Libraries\database\models\Traits.cs" />
+    <Compile Include="Libraries\database\models\trait\CraftLevels.cs" />
+    <Compile Include="Libraries\database\models\trait\Effect.cs" />
+    <Compile Include="Libraries\database\models\trait\Effects.cs" />
+    <Compile Include="Libraries\database\models\trait\Levels.cs" />
+    <Compile Include="Libraries\database\models\trait\Target.cs" />
+    <Compile Include="Libraries\database\models\trait\Visualfactor.cs" />
+    <Compile Include="Libraries\database\models\Vendor.cs" />
+    <Compile Include="Libraries\database\models\Vendors.cs" />
+    <Compile Include="Libraries\database\models\vendor\Consumable.cs" />
+    <Compile Include="Libraries\database\models\vendor\Cost.cs" />
+    <Compile Include="Libraries\database\models\vendor\Item.cs" />
+    <Compile Include="Libraries\database\models\vendor\Items.cs" />
+    <Compile Include="Libraries\database\models\vendor\Itemset.cs" />
+    <Compile Include="Libraries\database\models\vendor\Itemsets.cs" />
+    <Compile Include="Libraries\database\models\vendor\Material.cs" />
+    <Compile Include="Libraries\database\models\vendor\Purchase.cs" />
+    <Compile Include="Libraries\enums\AllianceTypes.cs" />
+    <Compile Include="Libraries\enums\AllianceTypesPrefix.cs" />
+    <Compile Include="Libraries\enums\Civilizations.cs" />
+    <Compile Include="Libraries\enums\CivilizationsPrefix.cs" />
+    <Compile Include="Libraries\enums\CivilizationsShort.cs" />
+    <Compile Include="Libraries\enums\ConnectionResponseTypes.cs" />
+    <Compile Include="Libraries\enums\OfferTypes.cs" />
+    <Compile Include="Libraries\enums\OfferTypesPrefix.cs" />
+    <Compile Include="Libraries\enums\PacketTypes.cs" />
+    <Compile Include="Libraries\enums\PacketTypesChat.cs" />
+    <Compile Include="Libraries\enums\QuestgamemodeTypes.cs" />
+    <Compile Include="Libraries\enums\QuestTypes.cs" />
+    <Compile Include="Libraries\enums\RarityTypes.cs" />
+    <Compile Include="Libraries\enums\RarityTypesPrefix.cs" />
+    <Compile Include="Libraries\enums\StringListTypes.cs" />
+    <Compile Include="Libraries\enums\Traittypes.cs" />
+    <Compile Include="Libraries\helpers\General.cs" />
+    <Compile Include="Libraries\helpers\Pathing.cs" />
+    <Compile Include="Libraries\helpers\xml\XML.cs" />
+    <Compile Include="Libraries\utf8stringwriter\Utf8StringWriter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(SolutionDir)AOEOQuestFiles\*.*" "AOEOQuestFiles\*.*" /Y /I /E</PostBuildEvent>
+  </PropertyGroup>
+</Project>
